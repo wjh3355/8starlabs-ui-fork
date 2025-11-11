@@ -13,14 +13,14 @@ interface StatusIndicatorProps {
 const getStateColors = (state: StatusIndicatorProps["state"]) => {
   switch (state) {
     case "active":
-      return { dot: "#22c55e", ping: "#4ade80" };
+      return { dot: "bg-green-500", ping: "bg-green-300" };
     case "down":
-      return { dot: "#dc2626", ping: "#f87171" };
+      return { dot: "bg-red-600", ping: "bg-red-400" };
     case "fixing":
-      return { dot: "#ca8a04", ping: "#facc15" };
+      return { dot: "bg-yellow-600", ping: "bg-yellow-400" };
     case "idle":
     default:
-      return { dot: "#334155", ping: "#64748b" };
+      return { dot: "bg-slate-700", ping: "bg-slate-400" };
   }
 };
 

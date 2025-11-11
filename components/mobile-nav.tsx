@@ -11,7 +11,8 @@ import {
   PopoverContent,
   PopoverTrigger
 } from "@/registry/8starlabs-ui/ui/popover";
-import { Icons } from "./icons";
+import { Icons } from "@/components/icons";
+import { useTheme } from "next-themes";
 
 export function MobileNav({
   items,
@@ -21,7 +22,7 @@ export function MobileNav({
   className?: string;
 }) {
   const [open, setOpen] = React.useState(false);
-
+  const { resolvedTheme } = useTheme();
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -50,7 +51,11 @@ export function MobileNav({
             <span className="sr-only">Toggle Menu</span>
           </div>
           <span className="flex h-8 items-center text-lg leading-none font-medium">
-            <Icons.logo className="size-8" />
+            {resolvedTheme === "dark" ? (
+              <Icons.eslLogoDarkSecondary className="size-8" />
+            ) : (
+              <Icons.eslLogoLightSecondary className="size-8" />
+            )}
           </span>
         </Button>
       </PopoverTrigger>
