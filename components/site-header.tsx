@@ -17,7 +17,7 @@ export function SiteHeader() {
   const { resolvedTheme } = useTheme();
   return (
     <header className="sticky left-0 top-0 z-50 h-20 w-full justify-center bg-[#ffffffb8] dark:bg-[#000000b8] backdrop-blur-[20px] backdrop-saturate-180">
-      <div className="m-auto flex h-full w-full max-w-10xl justify-between px-6 sm:px-16 items-center">
+      <div className="m-auto flex h-full w-full max-w-10xl justify-between px-6 md:px-16 items-center">
         <MobileNav items={siteConfig.navLinks} className="flex lg:hidden" />
         <Button
           asChild

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { FileIcon } from "lucide-react";
+import { ExternalLink, FileIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   CommandDialog,
@@ -69,10 +69,18 @@ const CommandMenu = () => {
                 key={navItem.href}
                 value={navItem.label}
                 onSelect={() => {
-                  runCommand(() => router.push(navItem.href));
+                  if (navItem.external) {
+                    window.open(navItem.href, "_blank", "noopener,noreferrer");
+                  } else {
+                    runCommand(() => router.push(navItem.href));
+                  }
                 }}
               >
-                <FileIcon className="mr-2 h-4 w-4" />
+                {navItem.external ? (
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                ) : (
+                  <FileIcon className="mr-2 h-4 w-4" />
+                )}
                 {navItem.label}
               </CommandItem>
             ))}

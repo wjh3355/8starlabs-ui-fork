@@ -18,7 +18,7 @@ export function MobileNav({
   items,
   className
 }: {
-  items: { href: string; label: string }[];
+  items: { href: string; label: string; external?: boolean }[];
   className?: string;
 }) {
   const [open, setOpen] = React.useState(false);
@@ -75,11 +75,25 @@ export function MobileNav({
               <MobileLink href="/" onOpenChange={setOpen}>
                 Home
               </MobileLink>
-              {items.map((item, index) => (
-                <MobileLink key={index} href={item.href} onOpenChange={setOpen}>
-                  {item.label}
-                </MobileLink>
-              ))}
+              {items.map((item, index) =>
+                item.external ? (
+                  <MobileExternalLink
+                    key={index}
+                    href={item.href}
+                    onOpenChange={setOpen}
+                  >
+                    {item.label}
+                  </MobileExternalLink>
+                ) : (
+                  <MobileLink
+                    key={index}
+                    href={item.href}
+                    onOpenChange={setOpen}
+                  >
+                    {item.label}
+                  </MobileLink>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -112,5 +126,31 @@ function MobileLink({
     >
       {children}
     </Link>
+  );
+}
+
+function MobileExternalLink({
+  href,
+  onOpenChange,
+  className,
+  children,
+  ...props
+}: {
+  href: string;
+  onOpenChange?: (open: boolean) => void;
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={() => onOpenChange?.(false)}
+      className={cn("text-2xl font-medium", className)}
+      {...props}
+    >
+      {children}
+    </a>
   );
 }

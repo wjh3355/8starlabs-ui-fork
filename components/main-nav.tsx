@@ -11,22 +11,35 @@ export function MainNav({
   className,
   ...props
 }: React.ComponentProps<"nav"> & {
-  items: { href: string; label: string }[];
+  items: { href: string; label: string; external?: boolean }[];
 }) {
   const pathname = usePathname();
 
   return (
     <nav className={cn("items-center gap-0.5", className)} {...props}>
-      {items.map((item) => (
-        <Button key={item.href} variant="ghost" asChild size="sm">
-          <Link
-            href={item.href}
-            className={cn(pathname === item.href && "text-primary")}
-          >
-            {item.label}
-          </Link>
-        </Button>
-      ))}
+      {items.map((item) =>
+        item.external ? (
+          <Button key={item.href} variant="ghost" asChild size="sm">
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(pathname === item.href && "text-primary")}
+            >
+              {item.label}
+            </a>
+          </Button>
+        ) : (
+          <Button key={item.href} variant="ghost" asChild size="sm">
+            <Link
+              href={item.href}
+              className={cn(pathname === item.href && "text-primary")}
+            >
+              {item.label}
+            </Link>
+          </Button>
+        )
+      )}
     </nav>
   );
 }

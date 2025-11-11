@@ -5,7 +5,8 @@ export const siteConfig = {
   url: "https://ui.8starlabs.com",
   navLinks: [
     { href: "/docs", label: "Docs" },
-    { href: "/docs/components", label: "Components" }
+    { href: "/docs/components", label: "Components" },
+    { href: "https://8starlabs.com/blogs", label: "Blog", external: true }
   ],
   links: {
     github: "https://github.com/8starlabs/ui",
