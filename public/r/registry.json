@@ -14,6 +14,30 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "transport-badge",
+      "type": "registry:ui",
+      "title": "Transport badge",
+      "description": "A transport badge component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/blocks/transport-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "system-banner",
+      "type": "registry:ui",
+      "title": "System banner",
+      "description": "A system banner component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/blocks/system-banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
