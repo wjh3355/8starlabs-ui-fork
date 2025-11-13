@@ -27,6 +27,26 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: ["8StarLabs", "UI", "shadcn", "Components", "transport"],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    type: "website",
+    url: "https://ui.8starlabs.com",
+    images: [
+      {
+        url: "https://8starlabs.com/thumbnails/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "8StarLabs Logo"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    creator: "@8starlabs"
+  },
   authors: [
     {
       name: "8StarLabs",
