@@ -10,6 +10,7 @@ import FaviconWrapper from "@/providers/FaviconWrapper";
 import Script from "next/script";
 import SystemBanner from "@/registry/8starlabs-ui/blocks/system-banner";
 import { source } from "@/lib/source";
+import SystemBannerClientWrapper from "./SystemBannerClientWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,7 +102,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <FaviconWrapper />
           <SiteHeader tree={tree} />
-          <SystemBanner show={ENVIRONMENT === "development"} />
+          <SystemBannerClientWrapper />
           <ProgressWrapper>
             <main className="relative z-10 flex min-h-svh flex-col">
               {children}

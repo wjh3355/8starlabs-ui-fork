@@ -1,0 +1,73 @@
+---
+title: Transport Badge
+description: A badge component that displays transport system information with customizable station codes and names.
+---
+
+<ComponentPreview name="transport-badge-demo" />
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @8starlabs-ui/transport-badge
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<ComponentSource
+  name="transport-badge"
+  title="components/ui/transport-badge.tsx"
+/>
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import TransportBadge from "@/components/ui/transport-badge";
+```
+
+```tsx showLineNumbers
+<TransportBadge system="SMRT" stationCode="NS1" />
+```
+
+## Examples
+
+### Single Line Stations
+
+<ComponentPreview name="transport-badge-demo-single-station" />
+
+### Multiple Line Stations
+
+<ComponentPreview name="transport-badge-demo-multi-station" />
+
+### Display Station Name
+
+<ComponentPreview name="transport-badge-demo-station-name" />
+
+### Sizes
+
+<ComponentPreview name="transport-badge-demo-sizes" />
+
+## API Reference
+
+| Prop              | Type                                             |
+| ----------------- | ------------------------------------------------ |
+| `system`          | `"SMRT"` (required)                              |
+| `stationCode`     | `string \| string[]` (required)                  |
+| `stationName`     | `string`                                         |
+| `showStationName` | `boolean` (default: `false`)                     |
+| `size`            | `"xs" \| "sm" \| "md" \| "lg"` (default: `"md"`) |
+| `className`       | `string`                                         |

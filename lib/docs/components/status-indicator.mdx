@@ -1,14 +1,9 @@
 ---
 title: Status Indicator
-description: A vertically stacked set of interactive headings that each reveal a section of content.
+description: A visual indicator displaying system or service status with animated dots for active, down, fixing, and idle states.
 ---
 
-<ComponentPreview
-  name="status-indicator-demo"
-  className="[&_.preview>[data-orientation=vertical]]:sm:max-w-[80%] **:[.preview]:min-h-[400px]"
-  description="A status indicator with three items"
-  align="start"
-/>
+<ComponentPreview name="status-indicator-demo" align="start" />
 
 ## Installation
 
@@ -50,3 +45,10 @@ import StatusIndicator from "@/components/ui/status-indicator";
 <StatusIndicator state="idle" label="Systems idle" />
 <StatusIndicator state="fixing" label="Diagnosing issue, fixing" />
 ```
+
+## API Reference
+
+| Prop    | Type                                       |
+| ------- | ------------------------------------------ |
+| `state` | `"active" \| "down" \| "fixing" \| "idle"` |
+| `label` | `string`                                   |

@@ -1,0 +1,73 @@
+---
+title: System Banner
+description: A fixed-position banner that displays environment or system status information at the top of the page.
+---
+
+## Installation
+
+<CodeTabs>
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+```bash
+npx shadcn@latest add @8starlabs-ui/system-banner
+```
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<ComponentSource name="system-banner" title="components/ui/system-banner.tsx" />
+
+</TabsContent>
+
+</CodeTabs>
+
+## Usage
+
+```tsx showLineNumbers
+import SystemBanner from "@/components/ui/system-banner";
+```
+
+<Callout variant="info">
+  Note: The `SystemBanner` component is designed to be used at the root level of
+  your application, typically within your main `layout.tsx` or `_app.tsx` file,
+  to ensure it appears above all other content.
+</Callout>
+
+```tsx showLineNumbers
+// In layout.tsx or _app.tsx
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <SystemBanner
+          text="You are in Development Mode"
+          color="bg-orange-500"
+          size="sm"
+          show={process.env.NODE_ENV === "development"}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}
+```
+
+## API Reference
+
+| Prop    | Type                                             |
+| ------- | ------------------------------------------------ |
+| `text`  | `string` (default: `"Development Mode"`)         |
+| `color` | `string` (default: `"bg-orange-500"`)            |
+| `size`  | `"xs" \| "sm" \| "md" \| "lg"` (default: `"xs"`) |
+| `show`  | `boolean` (default: `true`)                      |
