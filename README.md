@@ -1,5 +1,7 @@
 # 8starlabs UI
 
+![Marketing](https://github.com/8starlabs/ui/blob/master/public/assets/thumbnails/banner_github.png?raw=true)
+
 [8StarLabs UI](https://ui.8starlabs.com) is a component library built on top of shadcn/ui to help you build modern, interactive, and unique interfaces faster.
 
 The library integrates seamlessly with Next.js projects using shadcn/ui and provides a simple CLI for adding components to your project.

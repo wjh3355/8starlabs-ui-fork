@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     url: "https://ui.8starlabs.com",
     images: [
       {
-        url: "https://8starlabs.com/thumbnails/thumbnail.png",
+        url: "https://ui.8starlabs.com/thumbnails/banner_x.png",
         width: 1200,
         height: 630,
-        alt: "8StarLabs Logo"
+        alt: "8StarLabs UI"
       }
     ]
   },
