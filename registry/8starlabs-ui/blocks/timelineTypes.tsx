@@ -1,20 +1,14 @@
 import { ReactElement } from "react";
 
-export type TimelineItemData = {
-  id: number;
+export type TimelineItem = {
   title: string;
   description: string;
   date: Date;
   highlight?: boolean;
 };
 
-export type TimelineItemProps = {
-  index?: number;
-  content: TimelineItemData;
-};
-
 export type TimelineProps = {
-  children: ReactElement<TimelineItemProps>[];
+  children: ReactElement<TimelineItem>[];
 
   dateDisplayFormat?: "day" | "month" | "year";
 
@@ -45,9 +39,7 @@ export type TimelineProps = {
   shadow?: boolean;
 };
 
-export type TimelineItemCardProps = {
-  isAbove: boolean;
-  content: TimelineItemData;
+export type TimelineConfig = Omit<TimelineProps, "children"> & {
+  numElements: number;
+  toHighlight: number[];
 };
-
-export type TimelineConfig = Omit<TimelineProps, "children">;
