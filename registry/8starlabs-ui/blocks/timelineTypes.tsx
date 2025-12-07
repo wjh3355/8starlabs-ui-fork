@@ -33,10 +33,6 @@ export type TimelineProps = {
   itemWidth?: number;
   itemGap?: number;
 
-  title?: string;
-  titleColor?: string;
-  titleSize?: number;
-
   shadow?: boolean;
 };
 

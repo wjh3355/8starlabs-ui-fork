@@ -126,9 +126,6 @@ export const timelineData: TimelineItemType[] = [
 
 export function Timeline({
   children,
-  title,
-  titleSize = 24,
-  titleColor = "#000000",
   dateDisplayFormat = "day",
   alternating = true,
   alignment = "top",
@@ -157,9 +154,6 @@ export function Timeline({
             (child.props as TimelineItemType).highlight ? index : -1
           )
           .filter((index) => index !== -1),
-        title,
-        titleSize,
-        titleColor,
         dateDisplayFormat,
         alternating,
         alignment,
@@ -189,9 +183,6 @@ export default function TimelineDemo() {
   return (
     <div className="flex justify-center items-center w-screen h-screen">
       <Timeline
-        title="Project Timeline"
-        titleSize={40}
-        titleColor="#FF5733"
         dateDisplayFormat="day"
         // alternating={false}
         // alignment="bottom"

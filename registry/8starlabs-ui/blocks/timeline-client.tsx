@@ -28,44 +28,30 @@ export function TimelineClient({
   config: TimelineContextType;
   children: ReactElement<TimelineItem>[];
 }) {
-  const { title, titleColor, titleSize, itemSpacing, itemGap, itemWidth } =
-    config;
+  const { itemSpacing, itemGap, itemWidth } = config;
 
   return (
-    <div id="timeline">
-      <div
-        id="timeline-title"
-        className={`font-bold text-center`}
-        style={{
-          fontSize: `${titleSize}px`,
-          color: titleColor
-        }}
-      >
-        {title}
-      </div>
+    <div className="overflow-x-auto w-screen" id="timeline">
+      <div className="px-10 inline-block py-6">
+        <div
+          id="timeline-grid"
+          className="grid relative"
+          style={{
+            gridAutoFlow: "column",
+            gridAutoColumns: `${itemWidth! + itemSpacing!}px`,
+            gridTemplateRows: "auto auto auto",
+            rowGap: `${itemGap}px`
+          }}
+        >
+          <TimelineContext.Provider value={config}>
+            {Children.map(children, (child, index) =>
+              cloneElement(child, { index })
+            )}
 
-      <div className="overflow-x-auto w-screen">
-        <div className="px-10 inline-block py-6">
-          <div
-            id="timeline-grid"
-            className="grid relative"
-            style={{
-              gridAutoFlow: "column",
-              gridAutoColumns: `${itemWidth! + itemSpacing!}px`,
-              gridTemplateRows: "auto auto auto",
-              rowGap: `${itemGap}px`
-            }}
-          >
-            <TimelineContext.Provider value={config}>
-              {Children.map(children, (child, index) =>
-                cloneElement(child, { index })
-              )}
-
-              {Children.map(children, (_, index) => (
-                <TimelineDotWithLine key={`dot-${index}`} index={index} />
-              ))}
-            </TimelineContext.Provider>
-          </div>
+            {Children.map(children, (_, index) => (
+              <TimelineDotWithLine key={`dot-${index}`} index={index} />
+            ))}
+          </TimelineContext.Provider>
         </div>
       </div>
     </div>
