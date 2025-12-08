@@ -167,8 +167,8 @@ export function Timeline({
   className,
   horizItemWidth = 220,
   horizItemSpacing = 130,
-  vertItemSpacing = 100,
-  vertItemMaxWidth = 400,
+  vertItemSpacing = 130,
+  vertItemMaxWidth = 350,
   alternating = true,
   alignment = "top/left",
   orientation = "horizontal",
@@ -176,8 +176,8 @@ export function Timeline({
 }: TimelineProps) {
   const isVertical = orientation === "vertical";
 
-  const spillover = Math.max(0, (horizItemWidth - horizItemSpacing) / 2);
-  const safePadding = spillover + 16;
+  const horizSpillover = Math.max(0, (horizItemWidth - horizItemSpacing) / 2);
+  const safePadding = horizSpillover + 16;
 
   return (
     <div id="timeline-container" className={cn(className)} {...props}>
@@ -375,17 +375,10 @@ const timelineData: TimelineItemProps[] = [
 
 export default function TimelineDemo() {
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
-      <Timeline
-        orientation="horizontal"
-        alignment="top/left"
-        alternating={true}
-        vertItemSpacing={150}
-      >
-        {timelineData.map((item, idx) => (
-          <TimelineItem key={idx} {...item} />
-        ))}
-      </Timeline>
-    </div>
+    <Timeline orientation="vertical">
+      {timelineData.map((item, idx) => (
+        <TimelineItem key={idx} {...item} />
+      ))}
+    </Timeline>
   );
 }
