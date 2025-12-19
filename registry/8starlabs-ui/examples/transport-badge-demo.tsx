@@ -9,7 +9,7 @@ export default function TransportBadgeDemo() {
       <TransportBadge
         system="SG"
         stationCode="NE12"
-        stationName="Serangoon"
+        stationName="Serangoon ests test est estes tes set set erwer ewrew jruewb iuwebrewirb webieb irwberiuw birwbeiurbiuwbriuewbriuewbiuewbiubriubiubriuwbieuwbriubewirbiuewbiuewbriewbirbewiust"
         showStationName
       />
       <TransportBadge system="SG" stationCode="TE12" size="xs" />
