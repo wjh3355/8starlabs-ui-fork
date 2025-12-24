@@ -7,6 +7,7 @@ import timeline_component from "@/registry/8starlabs-ui/blocks/timeline";
 import transport_badge_component from "@/registry/8starlabs-ui/blocks/transport-badge";
 import flip_clock_countdown_demo_component from "@/registry/8starlabs-ui/examples/flip-clock-countdown-demo";
 import flip_clock_demo_component from "@/registry/8starlabs-ui/examples/flip-clock-demo";
+import flip_clock_showdays_demo_component from "@/registry/8starlabs-ui/examples/flip-clock-showdays-demo";
 import flip_clock_size_demo_component from "@/registry/8starlabs-ui/examples/flip-clock-size-demo";
 import flip_clock_variants_demo_component from "@/registry/8starlabs-ui/examples/flip-clock-variants-demo";
 import scroll_fade_demo_component from "@/registry/8starlabs-ui/examples/scroll-fade-demo";
@@ -104,6 +105,16 @@ export const Index: Record<string, any> = {
         target: ""
       }],
       component: flip_clock_demo_component
+    },
+    "flip-clock-showdays-demo": {
+      name: "flip-clock-showdays-demo",
+      type: "registry:example",
+      files: [{
+        path: "registry/8starlabs-ui/examples/flip-clock-showdays-demo.tsx",
+        type: "registry:example",
+        target: ""
+      }],
+      component: flip_clock_showdays_demo_component
     },
     "flip-clock-size-demo": {
       name: "flip-clock-size-demo",

@@ -1,27 +1,26 @@
 import FlipClock from "@/registry/8starlabs-ui/blocks/flip-clock";
 
-export default function FlipClockCountdownDemo() {
+export default function FlipClockShowDaysDemo() {
   return (
     <div className="flex flex-col gap-8">
-      {/* 1 day ahead */}
+      {/* Always show days, even if zero */}
       <FlipClock
         countdown={true}
+        showDays="always"
         targetDate={new Date(Date.now() + 1000 * 60 * 60 * 24)}
         size={"md"}
       />
-
-      {/* 10 days ahead */}
+      {/* Show days only if non-zero */}
       <FlipClock
-        variant="secondary"
         countdown={true}
-        targetDate={new Date(Date.now() + 1000 * 60 * 60 * 24 * 10)}
+        showDays="auto"
+        targetDate={new Date(Date.now() + 1000 * 60 * 60 * 24)}
         size={"md"}
       />
-
-      {/* 500 days ahead */}
+      {/* Never show days, even if 1 or more */}
       <FlipClock
-        variant="muted"
         countdown={true}
+        showDays="never"
         targetDate={new Date(Date.now() + 1000 * 60 * 60 * 24 * 500)}
         size={"md"}
       />
