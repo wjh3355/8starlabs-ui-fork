@@ -71,7 +71,7 @@ import {
 | `num`       | `number`                                                            | `0`         | The numerical value representing the size of this segment relative to others. The width of this segment is calculated based on this value relative to the total of all segments. |
 | `variant`   | `'default' \| 'secondary' \| 'destructive' \| 'outline' \| 'muted'` | `'default'` | The visual style variant of the partition bar segment.                                                                                                                           |
 | `alignment` | `'left' \| 'center' \| 'right'`                                     | `'center'`  | The text alignment within the partition bar segment.                                                                                                                             |
-| `children`  | `React.ReactNode`                                                   | `undefined` | The child elements of the partition bar segment, which can must be `PartitionBarSegmentTitle` and `PartitionBarSegmentValue` components.                                         |
+| `children`  | `React.ReactNode`                                                   | `undefined` | The child elements of the partition bar segment, which must be `PartitionBarSegmentTitle` and `PartitionBarSegmentValue` components.                                             |
 
 ## Examples
 
@@ -89,7 +89,7 @@ import {
 
 ### Manually Setting Width
 
-By default, the entire partition bar fills the width of its container. You can manually set the width of the partition bar using standard CSS width properties.
+By default, the partition bar fills the width of its container. You can manually set the width of the partition bar using standard CSS width properties on the `PartitionBar` component.
 
 <ComponentPreview name="partition-bar-width-demo" align="start" />
 
