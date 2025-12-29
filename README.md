@@ -39,6 +39,6 @@ Licensed under the [MIT license](https://github.com/8starlabs/ui/blob/main/LICEN
 ## Contact
 
 - Tham Kei Lok (Lead Engineer & Developer Relations) - [X](https://www.x.com/keiloktql/), [LinkedIn](https://www.linkedin.com/in/keiloktql/)
-- Wang Jia Hua (Software Engineer, Documentation) - [LinkedIn](https://www.linkedin.com/in/jiahua-wang-74ewfb/)
+- Wang Jia Hua (Software Engineer, Full-stack) - [LinkedIn](https://www.linkedin.com/in/jiahua-wang-74ewfb/)
 
 Engineered by [8StarLabs](https://8starlabs.com).
