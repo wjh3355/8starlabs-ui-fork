@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FlipClock from "@/registry/8starlabs-ui/blocks/flip-clock";
 import { Card } from "@/registry/8starlabs-ui/ui/card";
+import ScrollFade from "@/registry/8starlabs-ui/blocks/scroll-fade";
 
 const FlipClockCard = () => {
   return (
@@ -14,9 +15,9 @@ const FlipClockCard = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 my-7">
+          <ScrollFade axis="horizontal" className="my-3">
             <FlipClock size={"md"} variant="secondary" />
-          </div>
+          </ScrollFade>
         </div>
 
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">

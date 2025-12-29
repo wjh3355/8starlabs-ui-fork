@@ -16,10 +16,10 @@ const flipUnitVariants = cva(
   {
     variants: {
       size: {
-        sm: "w-10 h-14 text-3xl", // Small (Compact UI)
-        md: "w-14 h-20 text-5xl", // Medium (Standard sidebar/header)
-        lg: "w-17 h-24 text-6xl", // Large (Focus/Hero)
-        xl: "w-22 h-32 text-8xl" // Extra Large (Dashboard/Landing)
+        sm: "w-10 min-w-10 h-14 text-3xl", // Small (Compact UI)
+        md: "w-14 min-w-14 h-20 text-5xl", // Medium (Standard sidebar/header)
+        lg: "w-17 min-w-17 h-24 text-6xl", // Large (Focus/Hero)
+        xl: "w-22 min-w-22 h-32 text-8xl" // Extra Large (Dashboard/Landing)
       },
       variant: {
         default: "bg-primary text-primary-foreground",
@@ -134,7 +134,7 @@ function DigitSpan({ children, position }: DigitSpanProps) {
 }
 
 const flipClockVariants = cva(
-  "flex justify-center items-center font-mono font-medium",
+  "relative flex justify-center items-center font-mono font-medium",
   {
     variants: {
       size: {
@@ -244,7 +244,7 @@ export default function FlipClock({
       aria-live="polite"
       {...props}
     >
-      <span className="sr-only">
+      <span className="sr-only absolute">
         {`${time.hours}:${time.minutes}:${time.seconds}`}
       </span>
 
