@@ -53,7 +53,7 @@ interface PartitionBar
   gap?: number;
 }
 
-export function PartitionBar({
+export default function PartitionBar({
   children,
   className,
   gap = 1,

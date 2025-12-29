@@ -1,5 +1,4 @@
-import {
-  PartitionBar,
+import PartitionBar, {
   PartitionBarSegment,
   PartitionBarSegmentTitle,
   PartitionBarSegmentValue
