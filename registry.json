@@ -28,6 +28,78 @@
       ]
     },
     {
+      "name": "heatmap-interpolate-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-interpolate-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "heatmap-display-style-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-display-style-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "heatmap-days-of-week-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-days-of-week-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "heatmap-size-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-size-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "heatmap-custom-colors-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-custom-colors-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
+      "name": "heatmap-custom-display-demo",
+      "type": "registry:example",
+      "title": "Heatmap",
+      "description": "A heatmap demo component",
+      "files": [
+        {
+          "path": "registry/8starlabs-ui/examples/heatmap-custom-display-demo.tsx",
+          "type": "registry:example"
+        }
+      ]
+    },
+    {
       "name": "partition-bar",
       "type": "registry:ui",
       "title": "Partition Bar",

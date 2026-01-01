@@ -1,47 +1,45 @@
 import Heatmap, {
   type HeatmapData
 } from "@/registry/8starlabs-ui/blocks/heatmap";
+import { useMemo } from "react";
 
-const data: HeatmapData = [
-  { date: "2025-12-01", value: 2 },
-  { date: "2025-12-02", value: 0 },
-  { date: "2025-12-03", value: 5 },
-  { date: "2025-12-04", value: 1 },
-  { date: "2025-12-05", value: 3 },
-  { date: "2025-12-06", value: 4 },
-  { date: "2025-12-07", value: 2 },
-  { date: "2025-12-08", value: 0 },
-  { date: "2025-12-09", value: 3 },
-  { date: "2025-12-10", value: 6 },
-  { date: "2025-12-11", value: 2 },
-  { date: "2025-12-12", value: 1 },
-  { date: "2025-12-13", value: 4 },
-  { date: "2025-12-14", value: 0 },
-  { date: "2025-12-15", value: 2 },
-  { date: "2025-12-16", value: 5 },
-  { date: "2025-12-17", value: 3 },
-  { date: "2025-12-18", value: 4 },
-  { date: "2025-12-19", value: 0 },
-  { date: "2025-12-20", value: 1 },
-  { date: "2025-12-21", value: 2 },
-  { date: "2025-12-22", value: 3 },
-  { date: "2025-12-23", value: 0 },
-  { date: "2025-12-24", value: 2 },
-  { date: "2025-12-25", value: 5 },
-  { date: "2025-12-26", value: 1 },
-  { date: "2025-12-27", value: 0 },
-  { date: "2025-12-28", value: 3 },
-  { date: "2025-12-29", value: 4 },
-  { date: "2025-12-30", value: 2 },
-  { date: "2025-12-31", value: 1 }
-];
+function generateRandomHeatmapData(
+  startDate: Date,
+  endDate: Date,
+  minValue: number = 0,
+  maxValue: number = 30
+): HeatmapData {
+  const data: HeatmapData = [];
+  const current = new Date(startDate);
+
+  while (current <= endDate) {
+    const dateString = current.toISOString().slice(0, 10);
+    const value =
+      Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+    data.push({ date: dateString, value });
+    current.setDate(current.getDate() + 1);
+  }
+
+  return data;
+}
 
 export default function HeatmapDemo() {
+  const data = useMemo(
+    () =>
+      generateRandomHeatmapData(
+        new Date("2025-01-01"),
+        new Date("2025-06-30"),
+        0,
+        30
+      ),
+    []
+  );
+
   return (
     <Heatmap
       data={data}
-      startDate={new Date("2025-12-01")}
-      endDate={new Date("2025-12-31")}
+      startDate={new Date("2025-01-01")}
+      endDate={new Date("2025-06-30")}
       colorMode="discrete"
     />
   );
