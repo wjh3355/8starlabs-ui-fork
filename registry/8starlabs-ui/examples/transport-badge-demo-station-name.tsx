@@ -17,7 +17,7 @@ export default function TransportBadgeDemoStationName() {
       />
       <TransportBadge
         system="SG"
-        stationCode={["NS27", "CC15"]}
+        stationCode={["NS27", "CE15"]}
         stationName="Marina Bay"
         showStationName
       />
