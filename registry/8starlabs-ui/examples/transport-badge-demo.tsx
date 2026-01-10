@@ -5,7 +5,7 @@ export default function TransportBadgeDemo() {
     <div className="flex flex-col gap-4">
       <TransportBadge system="SG" stationCode="NS1" />
       <TransportBadge system="SG" stationCode={["NS1", "DT24", "TE12"]} />
-      <TransportBadge system="SG" stationCode="CC12" />
+      <TransportBadge system="SG" stationCode="CE12" />
       <TransportBadge
         system="SG"
         stationCode="NE12"

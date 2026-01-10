@@ -12,8 +12,8 @@ export default function TransportBadgeDemoSizes() {
         <TransportBadge system="SG" stationCode={["EW12", "DT14"]} size="sm" />
       </div>
       <div className="flex items-center gap-3">
-        <TransportBadge system="SG" stationCode="CC4" size="md" />
-        <TransportBadge system="SG" stationCode={["CC4", "NE6"]} size="md" />
+        <TransportBadge system="SG" stationCode="CE4" size="md" />
+        <TransportBadge system="SG" stationCode={["CE4", "NE6"]} size="md" />
       </div>
       <div className="flex items-center gap-3">
         <TransportBadge system="SG" stationCode="DT15" size="lg" />

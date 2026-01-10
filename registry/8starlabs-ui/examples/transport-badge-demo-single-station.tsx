@@ -6,7 +6,7 @@ export default function TransportBadgeDemoSingleStation() {
       <TransportBadge system="SG" stationCode="NS1" />
       <TransportBadge system="SG" stationCode="EW12" />
       <TransportBadge system="SG" stationCode="NE6" />
-      <TransportBadge system="SG" stationCode="CC4" />
+      <TransportBadge system="SG" stationCode="CE4" />
       <TransportBadge system="SG" stationCode="DT15" />
       <TransportBadge system="SG" stationCode="TE9" />
     </div>
